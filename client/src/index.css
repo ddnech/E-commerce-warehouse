@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", "Instrument Sans", system-ui, sans-serif;
+  --font-sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-canvas: #f2f3ef;
+  --color-surface: #ffffff;
+  --color-ink: #1f2620;
+  --color-ink-soft: #626b63;
+  --color-line: #dce0d8;
+
+  /* moss green: the brand and main actions */
+  --color-moss: #3d5a40;
+  --color-moss-dark: #2e4531;
+  --color-moss-tint: #e3ece4;
+
+  /* teak: small warm accents */
+  --color-teak: #a35f2d;
+  --color-teak-tint: #f4e6da;
+
+  /* status colours */
+  --color-clay: #b23b32;
+  --color-clay-tint: #f7e1de;
+  --color-sun: #8a5f0e;
+  --color-sun-tint: #f6ecd3;
+  --color-sky: #2d5d7b;
+  --color-sky-tint: #e0ebf2;
+
+  /* room backdrops for product art */
+  --color-room-living: #dde5d9;
+  --color-room-bedroom: #dce3ec;
+  --color-room-dining: #efe3d3;
+  --color-room-work: #e4e1ec;
+  --color-room-kids: #f1e2dc;
+  --color-room-light: #f2eacb;
+  --color-room-bath: #d9e9e7;
+  --color-room-outdoor: #e1e8cf;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-canvas text-ink font-sans;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-moss);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility input {
+  @apply w-full rounded-lg border border-line bg-surface px-3.5 py-2.5 text-sm text-ink placeholder:text-ink-soft/70
+    transition-colors focus:border-moss focus:outline-none focus:ring-2 focus:ring-moss/20
+    aria-invalid:border-clay aria-invalid:ring-clay/15 disabled:bg-canvas disabled:text-ink-soft;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold
+    transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+}
+@utility btn-primary {
+  @apply btn bg-moss text-white hover:bg-moss-dark;
+}
+@utility btn-secondary {
+  @apply btn border border-line bg-surface text-ink hover:border-ink-soft/40;
+}
+@utility btn-ghost {
+  @apply btn text-ink hover:bg-ink/5;
+}
+@utility btn-danger {
+  @apply btn border border-clay/30 bg-surface text-clay hover:bg-clay-tint;
+}
+@utility panel {
+  @apply rounded-2xl border border-line bg-surface;
+}
+@utility price {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+/* Unlayered on purpose so size helpers always win over the padding in btn-*. */
+.btn-sm {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+}
+.btn-lg {
+  padding: 0.85rem 1.6rem;
+  font-size: 1rem;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

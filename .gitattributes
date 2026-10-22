@@ -1,0 +1,2 @@
+# Shell scripts must keep Unix line endings or they will not run inside Docker.
+*.sh text eol=lf

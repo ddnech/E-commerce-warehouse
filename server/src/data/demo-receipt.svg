@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="560" viewBox="0 0 360 560" font-family="Helvetica, Arial, sans-serif">
+  <rect width="360" height="560" fill="#f4f5f2"/>
+  <rect x="20" y="20" width="320" height="520" rx="14" fill="#ffffff" stroke="#dfe2db"/>
+  <text x="180" y="70" text-anchor="middle" font-size="15" fill="#6b726c">Sample transfer receipt</text>
+  <circle cx="180" cy="120" r="26" fill="#e3ede6"/>
+  <path d="M168 120l8 8 16-16" fill="none" stroke="#3d5a40" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="180" y="180" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2620">Transfer successful</text>
+  <text x="180" y="222" text-anchor="middle" font-size="28" font-weight="800" fill="#1f2620">Rp 3.276.000</text>
+  <line x1="44" y1="250" x2="316" y2="250" stroke="#dfe2db" stroke-dasharray="4 4"/>
+  <g font-size="13" fill="#6b726c">
+    <text x="44" y="285">To</text><text x="316" y="285" text-anchor="end" fill="#1f2620">PT Furnifor Indonesia</text>
+    <text x="44" y="315">Account</text><text x="316" y="315" text-anchor="end" fill="#1f2620">123 456 7890</text>
+    <text x="44" y="345">From</text><text x="316" y="345" text-anchor="end" fill="#1f2620">Demo Customer</text>
+    <text x="44" y="375">Reference</text><text x="316" y="375" text-anchor="end" fill="#1f2620">FURNIFOR ORDER</text>
+    <text x="44" y="405">Date</text><text x="316" y="405" text-anchor="end" fill="#1f2620">Today, 10:24</text>
+  </g>
+  <line x1="44" y1="435" x2="316" y2="435" stroke="#dfe2db" stroke-dasharray="4 4"/>
+  <text x="180" y="475" text-anchor="middle" font-size="11" fill="#9aa19b">Demo image created by the seeder.</text>
+  <text x="180" y="493" text-anchor="middle" font-size="11" fill="#9aa19b">Not a real bank document.</text>
+</svg>

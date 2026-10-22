@@ -1,0 +1,9 @@
+const path = require("path");
+
+// Lets you run `npx sequelize-cli ...` straight from the server folder.
+module.exports = {
+  config: path.resolve("src", "config", "config.js"),
+  "models-path": path.resolve("src", "models"),
+  "migrations-path": path.resolve("src", "migrations"),
+  "seeders-path": path.resolve("src", "seeders"),
+};
